@@ -1,1 +1,110 @@
 <paste log output from Docker prediction, here>
+Sending build context to Docker daemon  47.67MB
+Step 1/6 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 551f97ef72ff
+Step 3/6 : COPY . app.py /app/
+ ---> bdf1bd9892b6
+Step 4/6 : RUN pip install --no-cache-dir --upgrade pip &&    pip install   --no-cache-dir  --trusted-host pypi.python.org -r requirements.txt
+ ---> Running in 6fe915310c22
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/96/2f/caec18213f6a67852f6997fb0673ae08d2e93d1b81573edb93ba4ef06970/pip-22.1.2-py3-none-any.whl (2.1MB)
+Installing collected packages: pip
+  Found existing installation: pip 19.1.1
+    Uninstalling pip-19.1.1:
+      Successfully uninstalled pip-19.1.1
+Successfully installed pip-22.1.2
+Collecting Click==7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.3/81.3 kB 26.1 MB/s eta 0:00:00
+Collecting Flask==1.0.2
+  Downloading Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.4/91.4 kB 240.5 MB/s eta 0:00:00
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.3
+  Downloading Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 264.4 MB/s eta 0:00:00
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl (33 kB)
+Collecting numpy==1.17.2
+  Downloading numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl (20.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.3/20.3 MB 251.6 MB/s eta 0:00:00
+Collecting pandas==0.24.2
+  Downloading pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.1/10.1 MB 233.5 MB/s eta 0:00:00
+Collecting python-dateutil==2.8.0
+  Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.8/226.8 kB 277.7 MB/s eta 0:00:00
+Collecting Werkzeug==0.16.0
+  Downloading Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 327.3/327.3 kB 282.7 MB/s eta 0:00:00
+Collecting pylint==2.4.4
+  Downloading pylint-2.4.4-py3-none-any.whl (302 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.0/303.0 kB 287.5 MB/s eta 0:00:00
+Collecting astroid<2.4,>=2.3.0
+  Downloading astroid-2.3.3-py3-none-any.whl (205 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 205.7/205.7 kB 282.1 MB/s eta 0:00:00
+Collecting isort<5,>=4.2.5
+  Downloading isort-4.3.21-py2.py3-none-any.whl (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 191.5 MB/s eta 0:00:00
+Collecting mccabe<0.7,>=0.6
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting lazy-object-proxy==1.4.*
+  Downloading lazy_object_proxy-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 kB 216.8 MB/s eta 0:00:00
+Collecting typed-ast<1.5,>=1.4.0
+  Downloading typed_ast-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (743 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 743.4/743.4 kB 306.1 MB/s eta 0:00:00
+Collecting wrapt==1.11.*
+  Downloading wrapt-1.11.2.tar.gz (27 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-cp37m-linux_x86_64.whl size=71326 sha256=22d586204cb62b07377ef082927de050b7b8d60180a0c3c045de0c7f1e90445f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-lj39vxmo/wheels/23/5f/62/304b411f20be41821465a82bc98baabc5e68c3cdd1eb99db71
+Successfully built wrapt
+Installing collected packages: wrapt, typed-ast, pytz, mccabe, Werkzeug, six, numpy, MarkupSafe, lazy-object-proxy, itsdangerous, isort, Click, scipy, python-dateutil, Jinja2, astroid, scikit-learn, pylint, pandas, Flask
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 astroid-2.3.3 isort-4.3.21 itsdangerous-1.1.0 lazy-object-proxy-1.4.3 mccabe-0.6.1 numpy-1.17.2 pandas-0.24.2 pylint-2.4.4 python-dateutil-2.8.0 pytz-2019.3 scikit-learn-0.20.3 scipy-1.3.1 six-1.12.0 typed-ast-1.4.3 wrapt-1.11.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Removing intermediate container 6fe915310c22
+ ---> ec7ca02b1040
+Step 5/6 : EXPOSE 80
+ ---> Running in 7098ee6bcd45
+Removing intermediate container 7098ee6bcd45
+ ---> 56dd937059bf
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in 283b753b1549
+Removing intermediate container 283b753b1549
+ ---> 2349cee9ee0b
+Successfully built 2349cee9ee0b
+Successfully tagged mlops:latest
+REPOSITORY   TAG             IMAGE ID       CREATED                  SIZE
+mlops        latest          2349cee9ee0b   Less than a second ago   1.24GB
+<none>       <none>          8203a307526f   6 hours ago              1.24GB
+<none>       <none>          29271f9ee030   6 hours ago              1.24GB
+python       3.7.3-stretch   34a518642c76   3 years ago              929MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 287-936-571
+[2022-06-19 19:15:06,394] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-06-19 19:15:06,405] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-06-19 19:15:06,412] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-06-19 19:15:06,415] INFO in app: prediction: 
+[20.35373177134412]
+172.17.0.1 - - [19/Jun/2022 19:15:06] "POST /predict HTTP/1.1" 200 -

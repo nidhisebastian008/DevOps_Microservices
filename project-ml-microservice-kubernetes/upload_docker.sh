@@ -5,11 +5,18 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+# dockerpath=nidhiseb
 
-# Step 2:  
-# Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+
+# # Step 2:  
+# # Authenticate & tag
+# docker login -u nidhiseb
+# docker tag mlops $dockerpath:mlops
+# echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
 # Push image to a docker repository
+# docker push $dockerpath
+# docker push $dockerpath:mlops
+docker push nidhiseb/mlops-repo:mlops
+
